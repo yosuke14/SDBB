@@ -1,0 +1,770 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles 
+*************************/
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 10px;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+h2 {
+    font-size: 2.4rem;
+}
+h3 {
+    font-size: 2.0rem;
+}
+h4 {
+    font-size: 1.6rem;
+}
+
+p, li {
+    font-size: 1.4rem;
+}
+
+section#activity h2,
+section#schedule h2,
+section#contact h2 {
+    width: 50%;
+}
+
+.inner {
+    width: 80%;
+}
+
+section .pc {
+    display: block;
+}
+
+section .sp {
+    display: none;
+}
+
+.main_sec {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container p {
+    letter-spacing: .2rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.main-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+    text-align: center;
+}
+
+.main-text-sub {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    opacity: 0;
+    animation: fadeIn 6s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+.red {
+    color: red;
+}
+
+.copylight {
+    font-size: .8rem;
+}
+
+.sec_line {
+    width: 0;
+    display: block;
+    border-bottom: 1px solid #fff;
+    margin: 0 auto 8rem;
+}
+
+.sec_line.is-active {
+    animation: expandLine 1s ease-out forwards;
+}
+
+@keyframes expandLine {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 50%;
+    }
+}
+
+
+.title_line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title_line::before,
+.title_line::after {
+    content: "";
+    flex-grow: .3;
+    height: 1px;
+    background-color: #fff;
+    margin: 0 30px;
+}
+
+/* Button */
+button {
+    background-color: rgba(241, 234, 196, 0.7);
+    border: #333 solid 1px;
+    border-radius: 10px;
+    padding: .2rem .5rem;
+    transition: 1s;
+    font-size: 1rem;
+}
+
+
+/* Header 
+*************************/
+header {
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: .5rem 0;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 4rem;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+header .container nav {
+    margin: auto 0;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin-left: 2rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #f9d342;
+}
+
+/* Hero Section 
+*************************/
+#hero {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 100px;
+    overflow: hidden;
+}
+
+#hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    filter: blur(0px);
+    /* 初期状態はぼかしなし */
+    transition: filter 0.2s ease-in-out;
+    /* ぼかし効果の変化をスムーズに */
+}
+
+#hero .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
+#hero .container {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    color: white;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin: 0;
+    padding: 20px 0;
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+#hero .container h2 {
+    margin-top: 40%;
+}
+
+.main_title {
+    height: 110vh;
+}
+
+.main_title div:nth-child(1) {
+    position: relative;
+    top: 50%;
+}
+
+/* About Section 
+*************************/
+#about {
+    text-align: center;
+    position: relative;
+    margin-bottom: 8rem;
+}
+
+#about h2 {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+#about p {
+    text-align: left;
+}
+
+#about .container {
+    display: flex;
+    /* flex-direction: row-reverse; */
+}
+
+#about .container div {
+    width: 100%;
+}
+
+#about .container img {
+    width: 70%;
+    margin-right: 5rem;
+    border-radius: 15px;
+}
+
+#about .title_line {
+    display: flex;
+}
+#about .title_line.sp{
+    display: none;
+}
+
+/* activity Section 
+*************************/
+
+#activity {
+    text-align: center;
+    position: relative;
+    margin-bottom: 8rem;
+}
+
+#activity h2 {
+    margin-bottom: 4rem;
+}
+
+.activity-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.activity-item {
+    position: relative;
+    margin: 1rem;
+    text-align: center;
+    overflow: hidden;
+    width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.activity-item h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.activity-item:hover img {
+    transform: scale(1.1);
+}
+
+.activity-item:hover h3 {
+    opacity: 1;
+}
+
+#activity .more_btn {
+    text-align: right;
+    margin-right: 1rem;
+}
+
+
+/* Events Section 
+*************************/
+#schedule {
+    text-align: center;
+    position: relative;
+    margin-bottom: 8rem;
+}
+
+#schedule h2 {
+    margin-bottom: 4rem;
+}
+
+#schedule .container {
+    margin-bottom: 4rem;
+}
+
+/* contact Section 
+*************************/
+#contact {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 4rem;
+}
+
+#contact p {
+    margin-bottom: 2rem;
+}
+
+.news_post {
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+.news_post nav {
+    text-align: left;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.news_post p {
+    text-align: right;
+}
+
+.news_post span {
+    margin-right: 1rem;
+}
+
+.news_post li a {
+    transition: 1s;
+}
+
+.news_post li a:hover {
+    transition: 1s;
+    opacity: .3;
+}
+
+.news_post .more_btn {
+    text-align: right;
+}
+
+.news_post .more_btn button:hover {
+    opacity: .7;
+    transition: 1s;
+}
+
+.news_post li {
+    border-bottom: solid 1px #4d4d4d;
+    padding: .3rem .5rem;
+}
+
+
+
+/* Footer 
+*************************/
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ハンバーガーメニュー 
+*************************/
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 40px;
+    height: 24px;
+    justify-content: space-between;
+    position: absolute; 
+    top: 15px;
+    right: 20px;
+    z-index: 10; 
+    transition: z-index 0.3s ease-in-out;
+}
+
+.menu-toggle span {
+    display: block;
+    background-color: #fff;
+    height: 3px; 
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.menu-toggle.is-active {
+    z-index: 9999; 
+}
+
+.menu-toggle.is-active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+    transform-origin: center;
+}
+
+.menu-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.is-active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+    transform-origin: center;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    margin: 10px 0;
+}
+
+#menu .menu-toggle {
+    margin-left: 2rem;
+    align-items: center;
+}
+
+
+/* メニューオーバーレイ 
+*************************/
+#menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(241, 234, 196, 0.7);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    z-index: 1000;
+}
+
+#menu-overlay.visible {
+    transform: translateY(0);
+}
+
+#menu-overlay .container {
+    justify-content: left;
+}
+
+#menu-overlay h1 {
+    margin-left: 10%;
+}
+
+#menu-overlay ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    display: block;
+}
+
+#menu-overlay ul li {
+    margin: 20px 0;
+    text-align: left;
+}
+
+#menu-overlay ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#menu-overlay ul li a span {
+    display: block;
+    color: black;
+}
+
+.text_en {
+    font-size: 1.5rem;
+}
+
+.text_ja {
+    font-size: .9rem;
+}
+
+#hero section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-out;
+}
+
+#hero section::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 80%;
+}
+
+#hero section h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font: normal 300 64px/1 'Josefin Sans', sans-serif;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.top_scrool a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    transform: translate(0, -50%);
+    color: #fff;
+    font: normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+
+.top_scrool a:hover {
+    opacity: .5;
+}
+
+#top_scrool a {
+    padding-top: 60px;
+}
+
+/* スクロールアニメーション
+**************************/
+#top_scrool a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+/* 矢印 */
+#top_scrool a span::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin: -12px 0 0 -8px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+}
+
+/* まる背景 */
+#top_scrool a span::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
+    border-radius: 20px;
+    opacity: 0;
+    animation: sdb03 2s infinite;
+    box-sizing: border-box;
+}
+
+@keyframes sdb03 {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    60% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, .1);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.feedin-top {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+    transform: translateY(-15%);
+}
+
+.feedin-left {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+    transform: translateX(-5%);
+}
+
+.feedin-right {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+    transform: translateX(5%);
+}
+
+.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* ボタンホバーアニメーション
+**************************/
+
+button {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    background: rgba(241, 234, 196);
+    padding: .4rem 1rem;
+    border: 1px solid #333;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    transition: .3s;
+  }
+  button::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: rgb(228, 215, 141);
+    border-radius: 20px;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform ease .3s;
+  }
+  button:hover {
+    color: #fff;
+  }
+  button:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  }
